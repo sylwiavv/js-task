@@ -45,18 +45,26 @@ const render = (students) => {
                 return a + b;
             }}, 0) / marks.length;
 
+        let className = '';
+        if ( averageMarks < 5) {
+            className = 'red';
+        } else {
+            className = 'green';
+        }
+
         console.log(averageMarks)
 
         div.classList.add('student-card');
+        div.classList.add(className);
         div.innerHTML = `
-            <div class="name">${name}</div>
-            <div class="last-name">${lastName}</div>
-            <div class="visited-lectures">${visitedLectures.length}</div>
-            <div class="average">${averageMarks}</div>
+            <div class="name"><span>Name:</span>${name}</div>
+            <div class="last-name"><span>Last Name:</span>${lastName}</div>
+            <div class="visited-lectures"><span>Visited lectures:</span>${visitedLectures.length}</div>
+            <div class="average"><span>Average:</span>${averageMarks}</div>
         `;
         fragment.appendChild(div);
     });
-    container.appendChild(fragment)
+    container.appendChild(fragment);
 }
 render(students);
 

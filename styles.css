@@ -21,4 +21,24 @@ body {
 .student-card {
     display: flex;
     justify-content: space-between;
+    border: 2px solid;
+    border-radius: 4px;
+    padding: 8px;
+}
+
+.student-card:not(:last-child) {
+    margin-bottom: 8px;
+}
+
+.student-card span {
+    font-weight: bold;
+    margin-right: 4px;
+}
+
+.student-card.green {
+    border-color: #448644;
+}
+
+.student-card.red {
+    border-color: #c72909;
 }
