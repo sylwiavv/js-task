@@ -1,0 +1,24 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-family: 'Montserrat', sans-serif;
+    box-sizing: border-box;
+    background-color: #fff;
+    color: #0e2436;
+    margin: 0 auto;
+    max-width: 900px;
+    width: 100%;
+}
+
+.container {
+   display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.student-card {
+    display: flex;
+    justify-content: space-between;
+}
