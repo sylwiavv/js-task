@@ -24,6 +24,7 @@ body {
     border: 2px solid;
     border-radius: 4px;
     padding: 8px;
+    background-color: white;
 }
 
 .student-card:not(:last-child) {
@@ -41,4 +42,8 @@ body {
 
 .student-card.red {
     border-color: #c72909;
+}
+
+.student-card.active {
+    background-color: gray;
 }

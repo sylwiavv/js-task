@@ -29,7 +29,6 @@ const students = [
 const container = document.querySelector('.container');
 
 const render = (students) => {
-    // if (!students.length) return;
     const fragment = document.createDocumentFragment();
     students.forEach(({name, lastName, marks}) => {
         const div = document.createElement('div');
@@ -52,8 +51,6 @@ const render = (students) => {
             className = 'green';
         }
 
-        console.log(averageMarks)
-
         div.classList.add('student-card');
         div.classList.add(className);
         div.innerHTML = `
@@ -63,10 +60,17 @@ const render = (students) => {
             <div class="average"><span>Average:</span>${averageMarks}</div>
         `;
         fragment.appendChild(div);
+
+
     });
     container.appendChild(fragment);
 }
 render(students);
 
-console.log(table);
-console.log(students);
+container.addEventListener("click", function (e) {
+    if (e.target.matches('.student-card')) {
+        const clickedElementChild = e.target;
+        clickedElementChild.classList.toggle('active');
+    }
+});
+
